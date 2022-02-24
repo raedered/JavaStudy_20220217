@@ -35,8 +35,8 @@ public class SwitchEx2 {
 		 case 6:
 			 System.out.println("D");
 			 break;
-		default :
-			 System.out.println("F");
+			default :
+				 System.out.println("F");
 		}
 
 	}
