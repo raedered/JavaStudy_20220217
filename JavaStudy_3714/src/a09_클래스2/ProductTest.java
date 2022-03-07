@@ -18,8 +18,8 @@ public class ProductTest {
 		test2(p);
 		System.out.println();
 		
-		Product tumbler = new Tumbler(2000, "스타벅스 텀블러", "오픈식");
-		Product cup = new MugCup(3000, "스타벅스 머그컵", true);
+		Tumbler tumbler = new Tumbler(2000, "스타벅스 텀블러", "오픈식");
+		MugCup cup = new MugCup(3000, "스타벅스 머그컵", true);
 		
 		Product[] products = new Product[2];
 		products[0] = tumbler;
@@ -27,7 +27,7 @@ public class ProductTest {
 		
 		for(int i = 0; i < products.length; i++) {
 			products[i].showProduct();
-			if(products[i] instanceof Tumbler) { //instanceof = 업캐스팅된 상태에서 다운캐스팅할때 사용한다
+			if(products[i] instanceof Tumbler) {
 				Tumbler tumbler2 = (Tumbler)products[i];
 				tumbler2.tumblerTest();
 			}else {
