@@ -60,7 +60,11 @@ public class PageController {
 			}else if(select == '2') {
 				String username = input.typedUsername(scanner);
 				User user = userService.getUser(username);
-				user.showUser();
+				if(user == null) {
+					System.out.println("해당 아이디로 회원 정보를 조회할 수 없습니다.");
+				}else {
+					user.showUser();					
+				}
 			}else if(select == 'b') {
 				System.out.println("메인 메뉴로 이동");
 			}else {

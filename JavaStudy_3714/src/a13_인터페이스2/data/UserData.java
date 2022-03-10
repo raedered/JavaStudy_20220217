@@ -24,6 +24,9 @@ public class UserData {
 
 	public void showUser() {
 		for(int i = 0; i < users.length; i++) {
+			if(users[i] == null) {
+				continue;
+			}
 			users[i].showUser();
 		}
 	}
