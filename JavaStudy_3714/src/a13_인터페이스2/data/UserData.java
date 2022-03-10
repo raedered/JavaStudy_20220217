@@ -27,7 +27,7 @@ public class UserData {
 			if(users[i] == null) {
 				continue;
 			}
-			users[i].showUser();
+			System.out.println(users[i]);
 		}
 	}
 }
