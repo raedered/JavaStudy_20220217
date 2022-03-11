@@ -4,6 +4,6 @@ import lombok.Data;
 
 @Data
 public class Car {
-	private String model;
+	private String Model;
 	
 }
