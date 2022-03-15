@@ -42,7 +42,7 @@ public class UserServiceImpl implements UserService{
 		User user = null;
 		for(int i = 0; i < users.length; i++) {
 			if(users[i] != null) {
-				if(users[i].getusername().equals(username)) {
+				if(users[i].getUsername().equals(username)) {
 					user = users[i];
 					break;
 				}
