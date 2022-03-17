@@ -55,22 +55,23 @@ public class StudentService {
 
 	// 학생 정보 수정
 	public void updateStudentByName(String name, String email, String address) {
-		System.out.println("[" + name + "학생 정보 수정]");
-		// 만약에 email또는 address가 null이거나 ""이 들어왔을 때 원래 정보 유지
-		for (Student student : studentList) {
-			if (isEmpty(email) && isEmpty(address)) {
-				if (student.getName().equals(name) && isEmpty(address)) {
-					System.out.println("수정할 정보가 없습니다");
-				} else {
-					if (isEmpty(email)) {
+		System.out.println("[" + name + " 학생 정보 수정]");
+		//만약에 email 또는 address가 null이거나 ""이 들어왔을 때 원래 정보 유지
+		for(Student student : studentList) {
+			if(student.getName().equals(name)) {
+				if(isEmpty(email) && isEmpty(address)) {
+					System.out.println("수정할 정보가 없습니다.");
+					System.out.println();
+				}else {
+					if(isEmpty(email)){
 						student.setAddress(address);
-					} else if (isEmpty(address)) {
+					}else if(isEmpty(address)) {
 						student.setEmail(email);
-					} else {
+					}else {
 						student.setEmail(email);
 						student.setAddress(address);
 					}
-					System.out.println(name + "학생 정보가 수정되었습니다.");
+					System.out.println(name + " 학생 정보가 수정되었습니다.");
 					System.out.println();
 				}
 				return;

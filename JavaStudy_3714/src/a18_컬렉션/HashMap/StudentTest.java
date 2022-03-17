@@ -13,10 +13,10 @@ public class StudentTest {
 		service.addStudent("김재삼", "ccc@gmail.com", "부산 사하구");
 		service.showStudentAll();
 		
-		service.updateStudentByName(null, null, null);
-		service.showStudentByName(null);
+		service.updateStudentByName("김재현", "ddd@kakao.com", "부산 북구");
+		service.showStudentByName("김재현");
 		
-		service.deleteStudentByName(null);
+		service.deleteStudentByName("김재이");
 		service.showStudentAll();
 	}
 
